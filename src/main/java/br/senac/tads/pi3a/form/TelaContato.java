@@ -468,7 +468,7 @@ public class TelaContato extends javax.swing.JFrame {
     }//GEN-LAST:event_btbSairActionPerformed
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         Date dataSistema = new Date();
-        SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd" + " HH:mm:ss"); // convertendo a data para uma string com o formato definido
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd" +"Hora: "+ " HH:mm:ss"); // convertendo a data para uma string com o formato definido
         jLData.setText(formato.format(dataSistema)); // passando a data do sistema para jLabelData, tem convertendo o formato da data para texto
        
     }//GEN-LAST:event_formWindowOpened
