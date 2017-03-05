@@ -11,8 +11,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,7 +77,7 @@ public class ContatoDao {
             contato.setEmail(rs.getString("email"));
             contato.setTelFixo(rs.getString("telefone_fixo"));
             contato.setTelCelular(rs.getString("telefone_movel"));
-            //contato.setData(rs.getString("dt_cadastro"));
+          //contato.setData(rs.getString("dt_cadastro"));
             //data = rs.getTimestamp("dt_cadastro"); // funciona pq o java.sql.Timestamp é uma subclasse de java.util.Date
             myList.add(contato);
         }
