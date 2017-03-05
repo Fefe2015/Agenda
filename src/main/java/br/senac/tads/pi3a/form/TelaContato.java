@@ -425,7 +425,7 @@ public class TelaContato extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, " Não há contato cadastrado! ");
         } else {
             //Adiciona uma linha para cada contato encontrado no banco
-            String[] linha = new String[]{null, null, null, null, null, null,null};
+            String[] linha = new String[]{null, null, null, null, null, null};
             //String[] linha = new String[6];
             for (int i = 0; i < contatos.size(); i++) {
 
@@ -436,7 +436,7 @@ public class TelaContato extends javax.swing.JFrame {
                 tbContato.setValueAt(contatos.get(i).getDataNasc(), i, 3);
                 tbContato.setValueAt(contatos.get(i).getTelFixo(), i, 4);
                 tbContato.setValueAt(contatos.get(i).getTelCelular(), i, 5);
-                tbContato.setValueAt(contatos.get(i).getData(),i,6);
+               // tbContato.setValueAt(contatos.get(i).getData(),i,6);
                 
 
             }
