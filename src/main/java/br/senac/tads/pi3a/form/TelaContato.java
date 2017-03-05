@@ -27,7 +27,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TelaContato extends javax.swing.JFrame {
 
-    DefaultTableModel tbContato = new DefaultTableModel(null, new String[]{"Id", "Nome", "E-mail", "Data Nasc", "Tel Fixo", "Celular"});
+    DefaultTableModel tbContato = new DefaultTableModel(null, new String[]{"Id", "Nome", "E-mail", "Data Nasc", "Tel Fixo", "Celular", "Data Cadastro"});
     List<Contato> contatos;
     ListSelectionModel myContact;
 
