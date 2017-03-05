@@ -51,6 +51,7 @@ public class ContatoDao {
         stmt.setString(5, contato.getTelCelular());
         stmt.setString(6, contato.getData());
         //stmt.setTimestamp(6, timestamp);
+        
         //Executa o codigo do sql e depois fecha
         stmt.execute();
         stmt.close();
@@ -77,7 +78,7 @@ public class ContatoDao {
             contato.setEmail(rs.getString("email"));
             contato.setTelFixo(rs.getString("telefone_fixo"));
             contato.setTelCelular(rs.getString("telefone_movel"));
-            contato.setData(rs.getString("dt_cadastro"));
+            //contato.setData(rs.getString("dt_cadastro"));
             //data = rs.getTimestamp("dt_cadastro"); // funciona pq o java.sql.Timestamp é uma subclasse de java.util.Date
             myList.add(contato);
         }

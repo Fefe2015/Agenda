@@ -27,7 +27,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TelaContato extends javax.swing.JFrame {
 
-    DefaultTableModel tbContato = new DefaultTableModel(null, new String[]{"Id", "Nome", "E-mail", "Data Nasc", "Tel Fixo", "Celular", "Data Cadastro"});
+    DefaultTableModel tbContato = new DefaultTableModel(null, new String[]{"Id", "Nome", "E-mail", "Data Nasc", "Tel Fixo", "Celular"});
     List<Contato> contatos;
     ListSelectionModel myContact;
 
@@ -346,7 +346,7 @@ public class TelaContato extends javax.swing.JFrame {
             jFormattedTextFieldDataNasc.setText(String.valueOf(contatos.get(table.getSelectedRow()).getDataNasc()));
             txtTelFixo.setText(contatos.get(table.getSelectedRow()).getTelFixo());
             txtCelular.setText(contatos.get(table.getSelectedRow()).getTelCelular());
-            jLData.setText(contatos.get(table.getSelectedRow()).getData());
+            //jLData.setText(contatos.get(table.getSelectedRow()).getData());
            // get(table.getSelectedRow()).getData());
             
         } else {
