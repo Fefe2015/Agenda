@@ -11,6 +11,7 @@ package br.senac.tads.pi3a.form;
 import br.senac.tads.pi3a.agenda.DAO.ContatoDao;
 import br.senac.tads.pi3a.agenda.model.Contato;
 import java.sql.SQLException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -29,7 +30,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TelaContato extends javax.swing.JFrame {
 
-    DefaultTableModel tbContato = new DefaultTableModel(null, new String[]{"Id", "Nome", "E-mail", "Data Nasc", "Tel Fixo", "Celular"});
+    DefaultTableModel tbContato = new DefaultTableModel(null, new String[]{"Id", "Nome", "E-mail", "Data Nasc", "Tel Fixo", "Celular","Data"});
     List<Contato> contatos;
     ListSelectionModel myContact;
 
@@ -348,7 +349,7 @@ public class TelaContato extends javax.swing.JFrame {
             jFormattedTextFieldDataNasc.setText(String.valueOf(contatos.get(table.getSelectedRow()).getDataNasc()));
             txtTelFixo.setText(contatos.get(table.getSelectedRow()).getTelFixo());
             txtCelular.setText(contatos.get(table.getSelectedRow()).getTelCelular());
-            //jLData.setText(contatos.get(table.getSelectedRow()).getData());
+            jLData.setText(contatos.get(table.getSelectedRow()).getData());
            // get(table.getSelectedRow()).getData());
             
         } else {
@@ -427,7 +428,7 @@ public class TelaContato extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, " Não há contato cadastrado! ");
         } else {
             //Adiciona uma linha para cada contato encontrado no banco
-            String[] linha = new String[]{null, null, null, null, null, null};
+            String[] linha = new String[]{null, null, null, null, null, null,null};
             //String[] linha = new String[6];
             for (int i = 0; i < contatos.size(); i++) {
 
@@ -438,7 +439,7 @@ public class TelaContato extends javax.swing.JFrame {
                 tbContato.setValueAt(contatos.get(i).getDataNasc(), i, 3);
                 tbContato.setValueAt(contatos.get(i).getTelFixo(), i, 4);
                 tbContato.setValueAt(contatos.get(i).getTelCelular(), i, 5);
-                //tbContato.setValueAt(contatos.get(i).getData(),i,6);
+                tbContato.setValueAt(contatos.get(i).getData(),i,6);
                 
 
             }
@@ -471,8 +472,9 @@ public class TelaContato extends javax.swing.JFrame {
     }//GEN-LAST:event_btbSairActionPerformed
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         Date dataSistema = new Date();
-        SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd" + " HH:mm:ss"); // convertendo a data para uma string com o formato definido
-        jLData.setText(formato.format(dataSistema)); // passando a data do sistema para jLabelData, tem convertendo o formato da data para texto
+        //SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd" + " HH:mm:ss"); // convertendo a data para uma string com o formato definido
+        DateFormat formatadorData = new SimpleDateFormat("dd/MM/yyyy");
+        jLData.setText(formatadorData.format(dataSistema)); // passando a data do sistema para jLabelData, tem convertendo o formato da data para texto
        
     }//GEN-LAST:event_formWindowOpened
     
