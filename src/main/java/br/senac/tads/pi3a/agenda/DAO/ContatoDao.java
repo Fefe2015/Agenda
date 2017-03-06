@@ -22,7 +22,7 @@ import java.util.List;
  * @author Fernanda
  */
 public class ContatoDao {
-    DateFormat formatadorData = new SimpleDateFormat("dd/MM/yyyy");
+   // DateFormat formatadorData = new SimpleDateFormat("dd/MM/yyyy");
     private Connection conecta;
    // java.util.Date data = new java.util.Date();
     public ContatoDao() throws SQLException {
@@ -52,8 +52,8 @@ public class ContatoDao {
         stmt.setString(3, contato.getEmail());
         stmt.setString(4, contato.getTelFixo());
         stmt.setString(5, contato.getTelCelular());
-        stmt.setDate(6, new java.sql.Date(System.currentTimeMillis()));
-        //stmt.setString(6, contato.getData());
+        stmt.setString(6, contato.getData());
+        //stmt.setDate(6, new java.sql.Date(System.currentTimeMillis()));
         //stmt.setTimestamp(6, timestamp);
         
         //Executa o codigo do sql e depois fecha
