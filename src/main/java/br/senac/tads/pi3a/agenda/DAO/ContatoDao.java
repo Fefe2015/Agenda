@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Centro Universitário Senac - Santo Amaro.
+ * Curso: CAS-Análise e Desenvolvimento de Sistemas - Tecnologia CASN.
+ * Aluna: Fernanda Alves Monteiro       Turma: A
+ *
  */
 package br.senac.tads.pi3a.agenda.DAO;
 
