@@ -8,7 +8,6 @@ package br.senac.tads.pi3a.form;
 import br.senac.tads.pi3a.agenda.DAO.ContatoDao;
 import br.senac.tads.pi3a.agenda.model.Contato;
 import java.sql.SQLException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -436,7 +435,7 @@ public class TelaContato extends javax.swing.JFrame {
                 tbContato.setValueAt(contatos.get(i).getDataNasc(), i, 3);
                 tbContato.setValueAt(contatos.get(i).getTelFixo(), i, 4);
                 tbContato.setValueAt(contatos.get(i).getTelCelular(), i, 5);
-               // tbContato.setValueAt(contatos.get(i).getData(),i,6);
+                //tbContato.setValueAt(contatos.get(i).getData(),i,6);
                 
 
             }

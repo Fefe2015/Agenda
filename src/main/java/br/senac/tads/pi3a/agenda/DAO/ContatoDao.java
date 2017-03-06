@@ -21,7 +21,7 @@ import java.util.List;
 public class ContatoDao {
 
     private Connection conecta;
-    java.util.Date data = new java.util.Date();
+   // java.util.Date data = new java.util.Date();
     public ContatoDao() throws SQLException {
         this.conecta = Connectionfactory.getConexao();
 
